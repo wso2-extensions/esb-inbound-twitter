@@ -1,4 +1,4 @@
-# esb-inbound-twitter
+# Twitter ESB Inbound
 
 The Twitter inbound endpoint allows you access the Twitter streaming API through WSO2 ESB.
 
