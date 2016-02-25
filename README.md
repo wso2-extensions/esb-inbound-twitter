@@ -3,7 +3,6 @@
 The Twitter inbound endpoint allows you access the Twitter streaming API through WSO2 ESB.
 
 ##Build
-
 mvn clean install
 
 ###How You Can Contribute
