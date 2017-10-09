@@ -72,8 +72,8 @@ public class TwitterStramDataTestCase {
         properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
         properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
         properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
-        properties.setProperty("twitter.operation", "sample");
-        properties.setProperty("twitter.language", "en");
+        properties.setProperty(TwitterConstant.TWITTER_OPERATION, "sample");
+        properties.setProperty(TwitterConstant.TWITTER_LANGUAGE, "en");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
         twitterStreamData.poll();
@@ -91,8 +91,8 @@ public class TwitterStramDataTestCase {
         properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
         properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
         properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
-        properties.setProperty("twitter.operation", "user");
-        properties.setProperty("twitter.track", "happy,wonderful");
+        properties.setProperty(TwitterConstant.TWITTER_OPERATION, "user");
+        properties.setProperty(TwitterConstant.TWITTER_TRACK, "happy,wonderful");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
         twitterStreamData.poll();
@@ -110,7 +110,7 @@ public class TwitterStramDataTestCase {
         properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
         properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
         properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
-        properties.setProperty("twitter.operation", "firehose");
+        properties.setProperty(TwitterConstant.TWITTER_OPERATION, "firehose");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
         twitterStreamData.poll();
@@ -128,8 +128,8 @@ public class TwitterStramDataTestCase {
         properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
         properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
         properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
-        properties.setProperty("twitter.operation", "site");
-        properties.setProperty("twitter.track", "happy");
+        properties.setProperty(TwitterConstant.TWITTER_OPERATION, "site");
+        properties.setProperty(TwitterConstant.TWITTER_TRACK, "happy");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
         twitterStreamData.poll();
