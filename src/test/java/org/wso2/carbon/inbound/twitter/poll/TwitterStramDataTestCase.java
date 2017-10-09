@@ -45,16 +45,16 @@ public class TwitterStramDataTestCase {
     @Test
     public void testTwitterStreamDataOperationFilter() throws Exception {
         Properties properties = new Properties();
-        properties.setProperty("connection.twitter.consumerKey", "KCHme1tyBln7L9E0zVte1PzFs");
-        properties.setProperty("connection.twitter.consumerSecret", "zQPn5OlMDcV0AFBC6MxhnNaLXMJCUGRIyeE1XogTwUou5tgC4a");
-        properties.setProperty("connection.twitter.accessToken", "3250392756-WLKUJstoqy2WL9HLMuvenpiZRkLOPayi8ca82uz");
-        properties.setProperty("connection.twitter.accessSecret", "56q7Fi4AEMy6xMJ4PTOuu7f3VcAYvO7PuSUHGSs9trWJU");
-        properties.setProperty("twitter.operation", "filter");
-        properties.setProperty("twitter.track", "happy,wonderful");
-        properties.setProperty("twitter.follow", "111871312,136479128");
-        properties.setProperty("twitter.locations", "-122.75:36.8,-121.75:37.8");
-        properties.setProperty("twitter.language", "en");
-        properties.setProperty("twitter.filterLevel", "medium");
+        properties.setProperty(TwitterConstant.CONSUMER_KEY, "testConsumerKey");
+        properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
+        properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
+        properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
+        properties.setProperty(TwitterConstant.TWITTER_OPERATION, "filter");
+        properties.setProperty(TwitterConstant.TWITTER_TRACK, "happy,wonderful");
+        properties.setProperty(TwitterConstant.TWITTER_FOLLOW, "111871312,136479128");
+        properties.setProperty(TwitterConstant.TWITTER_LOCATIONS, "-122.75:36.8,-121.75:37.8");
+        properties.setProperty(TwitterConstant.TWITTER_LANGUAGE, "en");
+        properties.setProperty(TwitterConstant.TWITTER_FILTER_LEVEL, "medium");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
         twitterStreamData.poll();
@@ -68,10 +68,10 @@ public class TwitterStramDataTestCase {
     @Test
     public void testTwitterStreamDataOperationSample() throws Exception {
         Properties properties = new Properties();
-        properties.setProperty("connection.twitter.consumerKey", "KCHme1tyBln7L9E0zVte1PzFs");
-        properties.setProperty("connection.twitter.consumerSecret", "zQPn5OlMDcV0AFBC6MxhnNaLXMJCUGRIyeE1XogTwUou5tgC4a");
-        properties.setProperty("connection.twitter.accessToken", "3250392756-WLKUJstoqy2WL9HLMuvenpiZRkLOPayi8ca82uz");
-        properties.setProperty("connection.twitter.accessSecret", "56q7Fi4AEMy6xMJ4PTOuu7f3VcAYvO7PuSUHGSs9trWJU");
+        properties.setProperty(TwitterConstant.CONSUMER_KEY, "testConsumerKey");
+        properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
+        properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
+        properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
         properties.setProperty("twitter.operation", "sample");
         properties.setProperty("twitter.language", "en");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
@@ -87,10 +87,10 @@ public class TwitterStramDataTestCase {
     @Test
     public void testTwitterStreamDataOperationUser() throws Exception {
         Properties properties = new Properties();
-        properties.setProperty("connection.twitter.consumerKey", "KCHme1tyBln7L9E0zVte1PzFs");
-        properties.setProperty("connection.twitter.consumerSecret", "zQPn5OlMDcV0AFBC6MxhnNaLXMJCUGRIyeE1XogTwUou5tgC4a");
-        properties.setProperty("connection.twitter.accessToken", "3250392756-WLKUJstoqy2WL9HLMuvenpiZRkLOPayi8ca82uz");
-        properties.setProperty("connection.twitter.accessSecret", "56q7Fi4AEMy6xMJ4PTOuu7f3VcAYvO7PuSUHGSs9trWJU");
+        properties.setProperty(TwitterConstant.CONSUMER_KEY, "testConsumerKey");
+        properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
+        properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
+        properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
         properties.setProperty("twitter.operation", "user");
         properties.setProperty("twitter.track", "happy,wonderful");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
@@ -106,10 +106,10 @@ public class TwitterStramDataTestCase {
     @Test
     public void testTwitterStreamDataOperationfirehose() throws Exception {
         Properties properties = new Properties();
-        properties.setProperty("connection.twitter.consumerKey", "KCHme1tyBln7L9E0zVte1PzFs");
-        properties.setProperty("connection.twitter.consumerSecret", "zQPn5OlMDcV0AFBC6MxhnNaLXMJCUGRIyeE1XogTwUou5tgC4a");
-        properties.setProperty("connection.twitter.accessToken", "3250392756-WLKUJstoqy2WL9HLMuvenpiZRkLOPayi8ca82uz");
-        properties.setProperty("connection.twitter.accessSecret", "56q7Fi4AEMy6xMJ4PTOuu7f3VcAYvO7PuSUHGSs9trWJU");
+        properties.setProperty(TwitterConstant.CONSUMER_KEY, "testConsumerKey");
+        properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
+        properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
+        properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
         properties.setProperty("twitter.operation", "firehose");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
@@ -124,10 +124,10 @@ public class TwitterStramDataTestCase {
     @Test
     public void testTwitterStreamDataOperationSite() throws Exception {
         Properties properties = new Properties();
-        properties.setProperty("connection.twitter.consumerKey", "KCHme1tyBln7L9E0zVte1PzFs");
-        properties.setProperty("connection.twitter.consumerSecret", "zQPn5OlMDcV0AFBC6MxhnNaLXMJCUGRIyeE1XogTwUou5tgC4a");
-        properties.setProperty("connection.twitter.accessToken", "3250392756-WLKUJstoqy2WL9HLMuvenpiZRkLOPayi8ca82uz");
-        properties.setProperty("connection.twitter.accessSecret", "56q7Fi4AEMy6xMJ4PTOuu7f3VcAYvO7PuSUHGSs9trWJU");
+        properties.setProperty(TwitterConstant.CONSUMER_KEY, "testConsumerKey");
+        properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
+        properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
+        properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
         properties.setProperty("twitter.operation", "site");
         properties.setProperty("twitter.track", "happy");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
@@ -143,11 +143,11 @@ public class TwitterStramDataTestCase {
     @Test(expectedExceptions = SynapseException.class)
     public void testTwitterStreamDataOperationInvalid() {
         Properties properties = new Properties();
-        properties.setProperty("connection.twitter.consumerKey", "KCHme1tyBln7L9E0zVte1PzFs");
-        properties.setProperty("connection.twitter.consumerSecret", "zQPn5OlMDcV0AFBC6MxhnNaLXMJCUGRIyeE1XogTwUou5tgC4a");
-        properties.setProperty("connection.twitter.accessToken", "3250392756-WLKUJstoqy2WL9HLMuvenpiZRkLOPayi8ca82uz");
-        properties.setProperty("connection.twitter.accessSecret", "56q7Fi4AEMy6xMJ4PTOuu7f3VcAYvO7PuSUHGSs9trWJU");
-        properties.setProperty("twitter.operation", "test");
+        properties.setProperty(TwitterConstant.CONSUMER_KEY, "testConsumerKey");
+        properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
+        properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
+        properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
+        properties.setProperty(TwitterConstant.TWITTER_OPERATION, "test");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
         twitterStreamData.poll();
@@ -159,11 +159,11 @@ public class TwitterStramDataTestCase {
     @Test(expectedExceptions = SynapseException.class)
     public void testTwitterStreamDataCountInvalid() {
         Properties properties = new Properties();
-        properties.setProperty("connection.twitter.consumerKey", "KCHme1tyBln7L9E0zVte1PzFs");
-        properties.setProperty("connection.twitter.consumerSecret", "zQPn5OlMDcV0AFBC6MxhnNaLXMJCUGRIyeE1XogTwUou5tgC4a");
-        properties.setProperty("connection.twitter.accessToken", "3250392756-WLKUJstoqy2WL9HLMuvenpiZRkLOPayi8ca82uz");
-        properties.setProperty("connection.twitter.accessSecret", "56q7Fi4AEMy6xMJ4PTOuu7f3VcAYvO7PuSUHGSs9trWJU");
-        properties.setProperty("twitter.count", "test");
+        properties.setProperty(TwitterConstant.CONSUMER_KEY, "testConsumerKey");
+        properties.setProperty(TwitterConstant.CONSUMER_SECRET, "testConsumerSecret");
+        properties.setProperty(TwitterConstant.ACCESS_TOKEN, "testAccesToken");
+        properties.setProperty(TwitterConstant.ACCESS_SECRET, "testAccesSecret");
+        properties.setProperty(TwitterConstant.TWITTER_COUNT, "test");
         twitterStreamData = new TwitterStreamData(properties, "test", enviornment, 10, "reqSequence",
                 "reqErrorSequence", true, true);
     }
