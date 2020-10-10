@@ -239,21 +239,25 @@ public class TwitterStreamData extends GenericPollingConsumer {
                 configurationBuilder.build()).getInstance();
         String twitterOperation = properties
                 .getProperty(TwitterConstant.TWITTER_OPERATION);
-        if (twitterOperation.equals(TwitterConstant.FILTER_STREAM_OPERATION)
-                || twitterOperation.equals(TwitterConstant.FIREHOSE_STREAM_OPERATION)
-                || twitterOperation.equals(TwitterConstant.LINK_STREAM_OPERATION)
-                || twitterOperation.equals(TwitterConstant.SAMPLE_STREAM_OPERATION)
-                || twitterOperation.equals(TwitterConstant.RETWEET_STREAM_OPERATION)) {
-            statusStreamsListener = new StatusListenerImpl();
-            twitterStream.addListener(statusStreamsListener);
-        } else if (twitterOperation.equals(TwitterConstant.USER_STREAM_OPERATION)) {
-            userStreamListener = new UserStreamListenerImpl();
-            twitterStream.addListener(userStreamListener);
-        } else if (twitterOperation.equals(TwitterConstant.SITE_STREAM_OPERATION)) {
-            siteStreamslistener = new siteStreamsListenerImpl();
-            twitterStream.addListener(siteStreamslistener);
+        if (twitterOperation != null) {
+            if (twitterOperation.equals(TwitterConstant.FILTER_STREAM_OPERATION)
+                    || twitterOperation.equals(TwitterConstant.FIREHOSE_STREAM_OPERATION)
+                    || twitterOperation.equals(TwitterConstant.LINK_STREAM_OPERATION)
+                    || twitterOperation.equals(TwitterConstant.SAMPLE_STREAM_OPERATION)
+                    || twitterOperation.equals(TwitterConstant.RETWEET_STREAM_OPERATION)) {
+                statusStreamsListener = new StatusListenerImpl();
+                twitterStream.addListener(statusStreamsListener);
+            } else if (twitterOperation.equals(TwitterConstant.USER_STREAM_OPERATION)) {
+                userStreamListener = new UserStreamListenerImpl();
+                twitterStream.addListener(userStreamListener);
+            } else if (twitterOperation.equals(TwitterConstant.SITE_STREAM_OPERATION)) {
+                siteStreamslistener = new siteStreamsListenerImpl();
+                twitterStream.addListener(siteStreamslistener);
+            } else {
+                handleException("The operation :" + twitterOperation + " not found");
+            }
         } else {
-            handleException("The operation :" + twitterOperation + " not found");
+            handleException("The operation parameter not set");
         }
 
 		/* Synchronously retrieves public statuses that match one or more filter predicates.*/
