@@ -1,0 +1,22 @@
+{
+    "name": "Twitter (Inbound)",
+    "owner": "WSO2",
+    "category": "Inbound Endpoint",
+    "documentationUrl": "https://apim.docs.wso2.com/en/latest/reference/connectors/twitter-connector/twitter-connector-overview/",
+    "description": "The Twitter inbound allows you to work with Twitter, a social networking site where users broadcast short posts with 280 characters known as 'Tweets'",
+    "status": "Active",
+    "labels": [
+        "communication"
+    ],
+    "releases": [
+        {
+            "tagName": "org.apache.synapse.twitter.poll.class-1.0.0",
+            "products": [
+                "MI 4.1.0",
+                "EI 6.6.0",
+                "EI 6.4.0"
+            ],
+            "isHidden": false
+        }
+    ]
+}
