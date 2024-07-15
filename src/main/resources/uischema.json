@@ -1,0 +1,156 @@
+{
+  "name": "twitterInbound",
+  "type": "inbound-connector",
+  "title": "Twitter Inbound Connector",
+  "help": "Configure the Twitter inbound connector to receive Twitter streams based on specified filters and authentication.",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Twitter Authentication",
+        "isCollapsible": "true",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "consumerKey",
+              "displayName": "Consumer Key",
+              "inputType": "string",
+              "required": "true",
+              "helpTip": "The consumer key for Twitter API."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "consumerSecret",
+              "displayName": "Consumer Secret",
+              "inputType": "string",
+              "required": "true",
+              "helpTip": "The consumer secret for Twitter API."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "accessToken",
+              "displayName": "Access Token",
+              "inputType": "string",
+              "required": "true",
+              "helpTip": "The access token for accessing Twitter API."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "accessSecret",
+              "displayName": "Access Secret",
+              "inputType": "string",
+              "required": "true",
+              "helpTip": "The access secret for Twitter API."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Twitter Stream Configuration",
+        "isCollapsible": "true",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterOperation",
+              "displayName": "Twitter Operation",
+              "inputType": "combo",
+              "comboValues": [
+                "filter",
+                "firehose",
+                "link",
+                "sample",
+                "site",
+                "user",
+                "retweet"
+              ],
+              "required": "true",
+              "helpTip": "Select the type of Twitter stream operation."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterCount",
+              "displayName": "Count",
+              "inputType": "string",
+              "required": "false",
+              "helpTip": "The number of tweets to retrieve."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterFollow",
+              "displayName": "Follow",
+              "inputType": "string",
+              "required": "false",
+              "helpTip": "A comma-separated list of user IDs to follow."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterTrack",
+              "displayName": "Track",
+              "inputType": "string",
+              "required": "false",
+              "helpTip": "Keywords to track."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterLocations",
+              "displayName": "Locations",
+              "inputType": "string",
+              "required": "false",
+              "helpTip": "Specifies a set of locations to track."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterLanguage",
+              "displayName": "Language",
+              "inputType": "string",
+              "required": "false",
+              "helpTip": "Specifies the language of the tweets."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterFilterLevel",
+              "displayName": "Filter Level",
+              "inputType": "combo",
+              "comboValues": ["none", "low", "medium"],
+              "required": "false",
+              "helpTip": "The level of filtering applied to the stream."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "twitterWithFollowings",
+              "displayName": "With Followings",
+              "inputType": "boolean",
+              "required": "false",
+              "helpTip": "Include user's followings in the stream."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
