@@ -12,9 +12,7 @@
         {
             "tagName": "org.apache.synapse.twitter.poll.class-1.0.0",
             "products": [
-                "MI 4.1.0",
-                "EI 6.6.0",
-                "EI 6.4.0"
+                "MI 4.1.0"
             ],
             "isHidden": false
         }
