@@ -1,12 +1,14 @@
 {
     "name": "Twitter (Inbound)",
     "owner": "WSO2",
-    "category": "Inbound Endpoint",
+    "category": "Social Media",
     "documentationUrl": "https://mi.docs.wso2.com/en/latest/reference/connectors/twitter-connector/twitter-connector-overview/",
     "description": "The Twitter inbound allows you to work with Twitter, a social networking site where users broadcast short posts with 280 characters known as 'Tweets'",
     "status": "Active",
     "labels": [
-        "communication"
+        "communication",
+        "inbound-endpoint",
+        "social-media"
     ],
     "releases": [
         {
