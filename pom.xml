@@ -189,9 +189,9 @@ Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
     </build>
     <distributionManagement>
         <repository>
-            <id>wso2-maven2-repository</id>
-            <name>WSO2 Maven2 Repository</name>
-            <url>scp://dist.wso2.org/home/httpd/dist.wso2.org/maven2/</url>
+            <id>nexus-releases</id>
+            <name>WSO2 Release Distribution Repository</name>
+            <url>https://maven.wso2.org/nexus/content/repositories/releases/</url>
         </repository>
     </distributionManagement>
     <properties>
